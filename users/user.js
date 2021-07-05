@@ -269,7 +269,7 @@ const loadMessage= async({sender, receiver})=>{
 
 
 const sendMessage = async ({sender, receiver, text}) =>{
-    const msg = await new Message ({sender, receiver, text}).save()
+    const msg = await new Message ({sender, receiver, text, createOn}).save()
 
     if (msg){
         // console.log("new message saved : ", msg);
